@@ -5,7 +5,7 @@ Bootapps - Bootstrap for mobile application
 
 =================
 
-Create a web application with Bootstrap and Bootapps
+Create One Page Application with Bootstrap and Bootapps for mobile and desktop application
 
 Demo
 -----------
