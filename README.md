@@ -46,6 +46,6 @@ Copyright and license
 
 Copyright 2014 Bootapps.
 
-The MIT License is simple and easy to understand and it places almost no restrictions on what you can do with iTabbar.
+The MIT License is simple and easy to understand and it places almost no restrictions on what you can do with Bootapps.
 
   http://opensource.org/licenses/mit-license.php
