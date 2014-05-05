@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    
+    <title>Bootapps - Bootstrap 3 Full Screen Layout</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootapps.css" rel="stylesheet">
+    <link href="css/offcanvas.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--<link rel="shortcut icon" href="/bootstrap/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/bootstrap/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/bootstrap/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png"> -->
+
+
+<!--remove style in boostrap.css or your theme
+inside @media (max-width:767px)
+.navbar-nav .open .dropdown-menu{position:static;float:none;width:auto;margin-top:0;background-color:transparent;border:0;box-shadow:none} -->
+<style type="text/css">
+ /* Custom container */
+
+@media (min-width: 768px) {
+	.container {
+	width: 100% !important;
+	max-width: 100% !important;
+	}
+
+}
+
+@media (min-width: 1200px) {
+	.container {
+	width: 100% !important;
+	max-width: 100% !important;
+	}
+
+}
+
+/* Custom navbar */
+
+</style>
+</head>
+
+<!--<body class="ba-spmenu-push"> --><!-- for Navigation push -->
+<body>
+
+<!--<div id="slide-menu">
+    <ul class="navigation">
+        <li class="toggle-nav"><a href="#">&#9776; </a></li>
+        <li><a href="#">Demo Link</a></li>
+        <li><a href="#">Demo Link</a></li>
+        <li><a href="#">Demo Link</a></li>
+        <li><a href="#">Demo Link</a></li>
+        <li><a href="#">Demo Link</a></li>
+    </ul>
+</div> -->
+
+<div id="ba-overlay"></div>
+
+<ul id="ba-spmenu-s1" class="list-group ba-spmenu ba-spmenu-left ba-spmenu-vertical">
+    <a href="javascript:void(0)" class="list-group-item"><i class="glyphicon glyphicon-list"></i> close</a>
+    <div class="ba-scroll-test">
+        <a href="#" class="list-group-item active" data-target="#homecarousel" data-slide-to="1">First active menu</a>
+        <a href="#" class="list-group-item" data-target="#homecarousel" data-slide-to="2">second menu</a>        
+        <li class="list-group-item active">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+    </div>
+</ul>
+
+<ul id="ba-spmenu-s2" class="list-group ba-spmenu ba-spmenu-right ba-spmenu-vertical ">
+    <a href="javascript:void(0)" class="list-group-item"><i class="glyphicon glyphicon-list"></i> close</a>
+    <div class="ba-scroll-test">
+        <a href="#" class="list-group-item active" data-target="#homecarousel" data-slide-to="1">First active menu</a>
+        <a href="#" class="list-group-item" data-target="#homecarousel" data-slide-to="2">second menu</a>        
+        <li class="list-group-item active">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+    </div>
+</ul>
+
+        
+<div class="container-full" id="ba-fullscreen">
+
+<!--Header-->
+<div id="header" class="navbar navbar-default navbar-fixed-top">
+
+	<div class="col-sm-4 col-md-3 pull-right ba-nav-icon">
+        <ul class="nav navbar-nav navbar-right ba-nav-right">
+            <li><a href="#"><i class="glyphicon glyphicon-search"></i></a></li>
+            <li><a href="#" class="showLeft"><i class="glyphicon glyphicon-list"></i></a></li>
+            <li><a href="#" class="showRight"><i class="glyphicon glyphicon-user"></i></a></li>
+            <!--<li><a href="#" class="ba-show-bck showRight" data-target="#homecarousel" data-slide-to="2"><i class="glyphicon glyphicon-user"></i></a></li> -->
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-plus"></i> <b class="caret"></b></a>
+               
+                <ul class="dropdown-menu pull-right" id="changeStyle">
+                	<li><a href="#" data-url="css/bootstrap.min.css">Change Style: Original</a></li>
+                    <li><a href="#" data-url="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/yeti/bootstrap.min.css">Yeti</a></li>
+                    <li><a href="#" data-url="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/cosmo/bootstrap.min.css">Cosmos</a></li>
+                    <li><a href="#" data-url="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/cyborg/bootstrap.min.css">Cyborg</a></li>
+                    <li><a href="#" data-url="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/flatly/bootstrap.min.css">Flaty</a></li>
+                    <li><a href="#" data-url="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/simplex/bootstrap.min.css">Simplex</a></li>
+                    <li><a href="#" data-url="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/slate/bootstrap.min.css">Slate</a></li>
+                    <li><a href="#" data-url="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/superhero/bootstrap.min.css">Superhero</a></li>
+                    <li><a href="#" data-url="http://bootswatch.com/cupid/bootstrap.css">Cupide</a></li>
+                </ul>
+                
+            </li>
+        </ul>
+   </div>
+
+    <div class="ba-container">
+        <div class="navbar-header">
+            <!--<a class="navbar-brand" href="#"><i class="glyphicon glyphicon-fire"></i> MyiPhone App</a> -->
+            <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button> -->
+            <!-- <div id="off-canvas" class="navbar-header pull-left">
+       <a class="navbar-brand" href="#" data-target="#off-canvas" style="margin-left: -34px;"><span class="glyphicon glyphicon-list"></span> <span class="glyphicon glyphicon-film"></span> Films</a>
+  	</div> -->
+            <div id="ba-bck" class="navbar-header pull-left"> <a class="navbar-brand ba-hide-bck" href="#" data-target="#homecarousel" data-slide-to="0"><span class="glyphicon glyphicon-chevron-left"></span> <span class="glyphicon glyphicon-home"></span> &nbsp;Home</a>
+
+            </div>
+        </div>
+        
+        <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="#" class="ba-hide-bck" data-target="#homecarousel" data-slide-to="0">Home</a>
+            </li>
+            <li><a href="#" class="ba-show-bck" data-target="#homecarousel" data-slide-to="2">Full Height</a>
+            </li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                </ul>
+            </li>
+        </ul>
+        
+        </div><!--/.navbar-collapse -->
+
+        
+    </div><!--/.ba-container -->
+</div><!--/.navbar -->
+
+
+<div id="homecarousel" class="carousel slide" data-ride="carousel"> <!--row for full width -->
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+                
+            <div class="ba-nav-tab btn-group btn-group-justified">
+                <a class="btn btn-default active" href="#home" data-toggle="tab"><span class="glyphicon glyphicon-home"></span> Home</a>
+                <a class="btn btn-default" href="#profile" data-toggle="tab"><span class="glyphicon glyphicon-user"></span> Profile</a>
+                <a class="btn btn-default" href="#messages" data-toggle="tab"><span class="glyphicon glyphicon-envelope"></span> Messages</a>
+            </div>
+        
+                <div class="tab-content">
+                    <div id="home" class="jumbotron text-center tab-pane fade in active">
+                        <h1>Bootapps - Mobile Bootstrap</h1>
+                    
+                        <p class="lead">The Bootstrap 3 grid is fluid only. This example shows how to use a custom container to create a fixed width layout.</p>
+                        <p><a class="btn btn-large btn-success ba-show-bck" data-target="#homecarousel" data-slide-to="2">Go to slide 3</a>
+                        </p>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="profile">
+                        <div class="ba-container ba-margin-top">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <address>
+                                      <strong>Twitter, Inc.</strong><br>
+                                      795 Folsom Ave, Suite 600<br>
+                                      San Francisco, CA 94107<br>
+                                      <abbr title="Phone">P:</abbr> (123) 456-7890
+                                    </address>
+                                    <address>
+                                      <strong>Full Name</strong><br>
+                                      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=#" onclick="window.open('https://mail.google.com/mail/?view=cm&amp;tf=1&amp;to=#&amp;cc=&amp;bcc=&amp;su=&amp;body=','_blank');return false;" target="_blank">first.last@example.com</a>
+                                    </address>
+                                </div>
+                            </div>
+                        </div>                                      
+                    </div>
+                    
+                     <div class="tab-pane fade" id="messages">
+                    
+                        <div class="panel panel-info ba-full" style="top:65px;">
+                            <div class="panel-heading">Panel full height</div>
+                            <div class="panel-body">Panel content
+                            
+                            <p>
+                              <button type="button" id="myalert2" class="btn btn-primary btn-lg ba-margin-top">Floating alert</button>
+                            </p>
+                                                     
+                            </div>
+                        </div>
+                    
+                    </div>                   
+                         
+                </div> <!--tab pan end -->
+            
+        </div>
+        <div class="item">
+            <!--<div class="fill" style="background-image:url('http://placehold.it/1900x1080/CC1111/fff&text=Slide Three');"></div> -->
+            <img src="http://placehold.it/1900x1080/CC1111/fff&amp;text=Slide Two" alt="...">
+            <div class="carousel-caption">Hello</div>
+        </div>
+        
+        <div class="item">
+            <div class="ba-container">
+            
+                <div class="panel panel-info ba-full">
+                    <div class="panel-heading">Panel full height</div>
+                    <div class="panel-body">Panel content
+                    
+                    <p>
+                      <button type="button" id="myalert" class="btn btn-primary btn-lg ba-margin-top">Floating alert</button>
+                    </p>
+                    
+                    
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+        <div class="item ba-scroll">
+
+                <div class="ba-container ba-margin-top">
+                
+                    <div class="panel panel-info">
+                        <div class="panel-heading">Panel heading without title</div>
+                        <div class="panel-body">Panel content
+                        
+                        </div>
+                    </div>
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                             <h3 class="panel-title">Panel title</h3>
+                
+                        </div>
+                        <div class="panel-body">Panel content</div>
+                    </div>
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading">Panel heading without title</div>
+                        <div class="panel-body">Panel content</div>
+                  </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             <h3 class="panel-title">Panel title</h3>
+                
+                        </div>
+                        	<div class="panel-body"><p>Abusus enim multitudine hominum, quam tranquillis in rebus diutius rexit, ex agrestibus habitaculis urbes construxit multis opibus firmas et viribus, quarum ad praesens pleraeque licet Graecis nominibus appellentur, quae isdem ad arbitrium inposita sunt conditoris, primigenia tamen nomina non amittunt, quae eis Assyria lingua institutores veteres indiderunt. 
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus, quem eum odisse iam conpererat lege communi, scribens ad Caesarem blandius adiumenta paulatim illi subtraxit, sollicitari se simulans ne, uti est militare otium fere tumultuosum, in eius perniciem conspiraret, solisque scholis iussit esse contentum palatinis et protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Quam ob rem cave Catoni anteponas ne istum quidem ipsum</p> <p>quem Apollo, ut ais, sapientissimum iudicavit; huius enim facta, illius dicta laudantur. De me autem, ut iam cum utroque vestrum loquar, sic habetote.
+Quo cognito Constantius ultra mortalem modum exarsit ac nequo casu idem Gallus de futuris incertus agitare quaedam conducentia saluti suae per itinera conaretur, remoti sunt omnes de industria milites agentes in civitatibus perviis. 
+Per hoc minui studium suum existimans Paulus, ut erat in conplicandis negotiis artifex dirus, unde ei Catenae inditum est cognomentum, vicarium ipsum eos quibus praeerat adhuc defensantem ad sortem periculorum communium traxit. et instabat ut eum quoque cum tribunis et aliis pluribus ad comitatum imperatoris vinctum perduceret: quo percitus ille exitio urgente abrupto ferro eundem adoritur Paulum. et quia languente dextera, letaliter ferire non potuit, iam districtum mucronem in proprium latus inpegit. hocque deformi genere mortis excessit e vita iustissimus rector ausus miserabiles casus levare multorum. 
+Et est admodum mirum videre plebem innumeram mentibus ardore quodam infuso cum dimicationum curulium eventu pendentem. haec similiaque memorabile nihil vel serium agi Romae permittunt. ergo redeundum ad textum.
+In his tractibus navigerum nusquam visitur flumen sed in locis plurimis aquae suapte natura calentes emergunt ad usus aptae multiplicium medelarum. verum has quoque regiones pari sorte Pompeius Iudaeis domitis et Hierosolymis captis in provinciae speciem delata iuris dictione formavit.
+Emensis itaque difficultatibus multis et nive obrutis callibus plurimis ubi prope Rauracum ventum est ad supercilia fluminis Rheni, resistente multitudine Alamanna pontem suspendere navium conpage Romani vi nimia vetabantur ritu grandinis undique convolantibus telis, et cum id inpossibile videretur, imperator cogitationibus magnis attonitus, quid capesseret ambigebat.
+</p><p>Abusus enim multitudine hominum, quam tranquillis in rebus diutius rexit, ex agrestibus habitaculis urbes construxit multis opibus firmas et viribus, quarum ad praesens pleraeque licet Graecis nominibus appellentur, quae isdem ad arbitrium inposita sunt conditoris, primigenia tamen nomina non amittunt, quae eis Assyria lingua institutores veteres indiderunt. 
+Haec subinde Constantius audiens et quaedam referente Thalassio doctus, quem eum odisse iam conpererat lege communi, scribens ad Caesarem blandius adiumenta paulatim illi subtraxit, sollicitari se simulans ne, uti est militare otium fere tumultuosum, in eius perniciem conspiraret, solisque scholis iussit esse contentum palatinis et protectorum cum Scutariis et Gentilibus, et mandabat Domitiano, ex comite largitionum, praefecto ut cum in Syriam venerit, Gallum, quem crebro acciverat, ad Italiam properare blande hortaretur et verecunde.
+Quam ob rem cave Catoni anteponas ne istum quidem ipsum</p> <p>quem Apollo, ut ais, sapientissimum iudicavit; huius enim facta, illius dicta laudantur. De me autem, ut iam cum utroque vestrum loquar, sic habetote.
+Quo cognito Constantius ultra mortalem modum exarsit ac nequo casu idem Gallus de futuris incertus agitare quaedam conducentia saluti suae per itinera conaretur, remoti sunt omnes de industria milites agentes in civitatibus perviis. 
+Per hoc minui studium suum existimans Paulus, ut erat in conplicandis negotiis artifex dirus, unde ei Catenae inditum est cognomentum, vicarium ipsum eos quibus praeerat adhuc defensantem ad sortem periculorum communium traxit. et instabat ut eum quoque cum tribunis et aliis pluribus ad comitatum imperatoris vinctum perduceret: quo percitus ille exitio urgente abrupto ferro eundem adoritur Paulum. et quia languente dextera, letaliter ferire non potuit, iam districtum mucronem in proprium latus inpegit. hocque deformi genere mortis excessit e vita iustissimus rector ausus miserabiles casus levare multorum. 
+Et est admodum mirum videre plebem innumeram mentibus ardore quodam infuso cum dimicationum curulium eventu pendentem. haec similiaque memorabile nihil vel serium agi Romae permittunt. ergo redeundum ad textum.
+In his tractibus navigerum nusquam visitur flumen sed in locis plurimis aquae suapte natura calentes emergunt ad usus aptae multiplicium medelarum. verum has quoque regiones pari sorte Pompeius Iudaeis domitis et Hierosolymis captis in provinciae speciem delata iuris dictione formavit.
+Emensis itaque difficultatibus multis et nive obrutis callibus plurimis ubi prope Rauracum ventum est ad supercilia fluminis Rheni, resistente multitudine Alamanna pontem suspendere navium conpage Romani vi nimia vetabantur ritu grandinis undique convolantibus telis, et cum id inpossibile videretur, imperator cogitationibus magnis attonitus, quid capesseret ambigebat.
+</p>
+							</div>
+                    </div>
+                    
+                </div>
+            
+        </div>
+    </div>
+
+    </div>
+
+        <div id="footer" class="btn-group btn-group-justified">
+            <a data-target="#homecarousel" data-slide-to="0" class="btn btn-default active ba-hide-bck" role="button"><span class="glyphicon glyphicon-home"></span>Home</a>
+            <a data-target="#homecarousel" data-slide-to="1" class="btn btn-default ba-show-bck" role="button"><span class="glyphicon glyphicon-picture"></span>Image</a>
+            <a data-target="#homecarousel" data-slide-to="2" class="btn btn-default ba-show-bck" role="button"><span class="glyphicon glyphicon-resize-vertical"></span>Full Height</a>
+            <a data-target="#homecarousel" data-slide-to="3" class="btn btn-default ba-show-bck" role="button"><span class="glyphicon glyphicon-sort-by-attributes-alt"></span>Scroll</a>
+		</div>
+</div> <!-- /container full -->
+
+<!--[if lt IE 9]><!-->  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script> 
+<!--<![endif]-->
+<!--[if (gte IE 9) | (!IE)]><!-->  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>  
+<!--<![endif]-->
+<script type='text/javascript' src="js/fastclick.min.js"></script>
+<script type='text/javascript' src="js/bootstrap.min.js"></script>
+<script type='text/javascript' src="js/fullscreen.js"></script>
+<script type='text/javascript' src="js/scrollfix.js"></script>
+<script type='text/javascript' src="js/bootapps.js"></script>
+
+<!-- Below is only for this demo -->
+<script type='text/javascript' src="js/utile.js"></script>
+
+<script>
+$(document).ready(function(){
+	
+	baTransition('scaleslide'); // slide2, fade, pop, scaleslide
+	
+	// find a way to set carousel item color
+	var bgcolor = $('body').css('background-color');
+	$('.carousel .item').css('background-color', bgcolor);
+
+}); // ready end
+
+$('#myalert, #myalert2').on('click', function () {
+    ba_alert.notify('Your text goes here <strong>html test</strong>', 'success', 4000);
+    // available: success, info, warning, danger
+});
+</script>
+
+   
+    </body>
+</html>
