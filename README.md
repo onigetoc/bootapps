@@ -1,4 +1,4 @@
-bootapps
+bootapps (Beta)
 ========
 
 Bootapps - Bootstrap for mobile application
@@ -9,8 +9,8 @@ Create One Page Application with Bootstrap and Bootapps for mobile and desktop a
 
 Demo
 -----------
-Demo: http://scripts.toolurl.com/1-Mobile/bootapps-05/GC-Bootapps-Android.html (on desktop test on Chrome or Safari)
-App created with Bootapps: http://textoverpic.com/
++ Demo: http://scripts.toolurl.com/1-Mobile/bootapps-05/GC-Bootapps-Android.html (on desktop test on Chrome or Safari)
++ App created with Bootapps: http://textoverpic.com/
 
 Quick start
 -----------
