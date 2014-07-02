@@ -12,5 +12,4 @@ $( "#changeStyle a" ).bind('click', function(e) {
 		$('.carousel .item').css('background-color', bgcolor);			
 	},1000);
 
-	
 });

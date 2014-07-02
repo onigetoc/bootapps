@@ -17,6 +17,11 @@ body {
   width: 100%;
 }*/
 
+/*CLEAR ALL HOVER*/
+/*.btn-group>.btn:hover, .btn-group-vertical>.btn:hover{
+background-color: transparent;
+}*/
+
 .ba-margin-top { margin-top:20px; } /* add margin top everywhere */
 .ba-margin-top-5 { margin-top:5px; } /* add margin top everywhere */
 .ba-margin-top-10 { margin-top:10px; } /* add margin top everywhere */

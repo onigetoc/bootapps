@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     
-    <title>Bootapps - Bootstrap 3 Full Screen Layout</title>
+    <title>Bootapps - mobile layout web app looking like a native application for Bootstrap 3</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="css/bootapps.css" rel="stylesheet">
@@ -65,7 +65,7 @@ inside @media (max-width:767px)
 <div id="ba-overlay"></div>
 
 <ul id="ba-spmenu-s1" class="list-group ba-spmenu ba-spmenu-left ba-spmenu-vertical">
-    <a href="javascript:void(0)" class="list-group-item"><i class="glyphicon glyphicon-list"></i> close</a>
+    <a href="javascript:void(0)" class="list-group-item"><i class="glyphicon glyphicon-remove"></i> close</a>
     <div class="ba-scroll-test">
         <a href="#" class="list-group-item active" data-target="#homecarousel" data-slide-to="1">First active menu</a>
         <a href="#" class="list-group-item" data-target="#homecarousel" data-slide-to="2">second menu</a>        
@@ -98,7 +98,7 @@ inside @media (max-width:767px)
 
 	<div class="col-sm-4 col-md-3 pull-right ba-nav-icon">
         <ul class="nav navbar-nav navbar-right ba-nav-right">
-            <li><a href="#"><i class="glyphicon glyphicon-search"></i></a></li>
+            <li><a href="#new" id="search"><i class="glyphicon glyphicon-search"></i></a></li>
             <li><a href="#" class="showLeft"><i class="glyphicon glyphicon-list"></i></a></li>
             <li><a href="#" class="showRight"><i class="glyphicon glyphicon-user"></i></a></li>
             <!--<li><a href="#" class="ba-show-bck showRight" data-target="#homecarousel" data-slide-to="2"><i class="glyphicon glyphicon-user"></i></a></li> -->
@@ -113,7 +113,8 @@ inside @media (max-width:767px)
                     <li><a href="#" data-url="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/simplex/bootstrap.min.css">Simplex</a></li>
                     <li><a href="#" data-url="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/slate/bootstrap.min.css">Slate</a></li>
                     <li><a href="#" data-url="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/superhero/bootstrap.min.css">Superhero</a></li>
-                    <li><a href="#" data-url="http://bootswatch.com/cupid/bootstrap.css">Cupide</a></li>
+                    <li><a href="#" data-url="http://bootswatch.com/united/bootstrap.min.css">United</a></li>
+                    <li><a href="#" data-url="http://bootswatch.com/darkly/bootstrap.min.css">Darkly</a></li>
                 </ul>
                 
             </li>
@@ -170,19 +171,30 @@ inside @media (max-width:767px)
         <div class="item active">
                 
             <div class="ba-nav-tab btn-group btn-group-justified">
-                <a class="btn btn-default active" href="#home" data-toggle="tab"><span class="glyphicon glyphicon-home"></span> Home</a>
+                <a class="btn btn-default active" href="#hometab" data-toggle="tab"><span class="glyphicon glyphicon-home"></span> Home Tab</a>
                 <a class="btn btn-default" href="#profile" data-toggle="tab"><span class="glyphicon glyphicon-user"></span> Profile</a>
                 <a class="btn btn-default" href="#messages" data-toggle="tab"><span class="glyphicon glyphicon-envelope"></span> Messages</a>
             </div>
         
                 <div class="tab-content">
-                    <div id="home" class="jumbotron text-center tab-pane fade in active">
-                        <h1>Bootapps - Mobile Bootstrap</h1>
+                    <div id="hometab" class="jumbotron text-center tab-pane fade in active">
+                        <h1>Bootapps - Mobile layout for Bootstrap</h1>
                     
-                        <p class="lead">The Bootstrap 3 grid is fluid only. This example shows how to use a custom container to create a fixed width layout.</p>
-                        <p><a class="btn btn-large btn-success ba-show-bck" data-target="#homecarousel" data-slide-to="2">Go to slide 3</a>
+                        <p class="lead">Bootapps - mobile layout web app looking like a native application for Bootstrap 3.											
+                        <footer><code>Swipe left or right to go to previous or next page</code></footer>
                         </p>
+                        
+                      <p>
+                        <a href='https://github.com/onigetoc/bootapps' target="_blank" class="btn btn-lg btn-info ba-show-bck"><i class="glyphicon glyphicon-cloud-download"></i> Bootapps on Github</a>
+                      </p>
+                        
+                      <p class="ba-margin-top">
+                        <a href='#full_height' class="btn btn-success ba-show-bck" data-target="#homecarousel" data-slide-to="2">Go to slide 3 <i class="glyphicon glyphicon-chevron-right"></i></a>
+                       </p>
+                        
                     </div>
+
+ 
                     
                     <div class="tab-pane fade" id="profile">
                         <div class="ba-container ba-margin-top">
@@ -232,11 +244,15 @@ inside @media (max-width:767px)
             
                 <div class="panel panel-info ba-full">
                     <div class="panel-heading">Panel full height</div>
-                    <div class="panel-body">Panel content
+                    <div class="panel-body">
                     
-                    <p>
-                      <button type="button" id="myalert" class="btn btn-primary btn-lg ba-margin-top">Floating alert</button>
+                    <h4>Full height panel</h4>
+                    <pre>&lt;div class="panel panel-info <strong>ba-full</strong>"&gt;Full panel height&lt;/div&gt;</pre>
+                    <hr>
+                    <h4>Floating Alert</h4>
+                   	<button type="button" id="myalert" class="btn btn-primary btn-lg ba-margin-top">Floating alert</button>
                     </p>
+                    <pre>ba_alert.notify('Your text goes here <strong>html test</strong>', 'success', 4000); // available: success, info, warning, danger</pre>
                     
                     
                     </div>
@@ -250,8 +266,16 @@ inside @media (max-width:767px)
                 <div class="ba-container ba-margin-top">
                 
                     <div class="panel panel-info">
-                        <div class="panel-heading">Panel heading without title</div>
-                        <div class="panel-body">Panel content
+                        <div class="panel-heading">Using Bootapps</div>
+                        <div class="panel-body">
+                        	<h4>Scroll class</h4>
+                    		<pre>&lt;div class="item <strong>ba-scroll</strong>"&gt; &lt;/div&gt;</pre>
+                            
+                            <hr>
+                            
+                        	<h4>Loading external page via ajax</h4>
+                    		<pre>&lt;a href="#ajaxpage" data-load="ajaxPage.html"&gt;Load ajax page&lt;/a&gt;</pre>
+                            <a href="#ajaxpage" data-load="ajaxPage.html">Load ajax page</a>
                         
                         </div>
                     </div>
@@ -300,10 +324,10 @@ Emensis itaque difficultatibus multis et nive obrutis callibus plurimis ubi prop
     </div>
 
         <div id="footer" class="btn-group btn-group-justified">
-            <a data-target="#homecarousel" data-slide-to="0" class="btn btn-default active ba-hide-bck" role="button"><span class="glyphicon glyphicon-home"></span>Home</a>
-            <a data-target="#homecarousel" data-slide-to="1" class="btn btn-default ba-show-bck" role="button"><span class="glyphicon glyphicon-picture"></span>Image</a>
-            <a data-target="#homecarousel" data-slide-to="2" class="btn btn-default ba-show-bck" role="button"><span class="glyphicon glyphicon-resize-vertical"></span>Full Height</a>
-            <a data-target="#homecarousel" data-slide-to="3" class="btn btn-default ba-show-bck" role="button"><span class="glyphicon glyphicon-sort-by-attributes-alt"></span>Scroll</a>
+            <a href='#home' data-target="#homecarousel" data-slide-to="0" class="btn btn-default active ba-hide-bck" role="button"><span class="glyphicon glyphicon-home"></span>Home</a>
+            <a href='#image' data-target="#homecarousel" data-slide-to="1" class="btn btn-default ba-show-bck" role="button"><span class="glyphicon glyphicon-picture"></span>Image</a>
+            <a href='#full_height' data-target="#homecarousel" data-slide-to="2" class="btn btn-default ba-show-bck" role="button"><span class="glyphicon glyphicon-resize-vertical"></span>Full Height</a>
+            <a href='#scroll' data-target="#homecarousel" data-slide-to="3" class="btn btn-default ba-show-bck" role="button"><span class="glyphicon glyphicon-sort-by-attributes-alt"></span>Scroll</a>
 		</div>
 </div> <!-- /container full -->
 
@@ -317,6 +341,7 @@ Emensis itaque difficultatibus multis et nive obrutis callibus plurimis ubi prop
 <script type='text/javascript' src="js/bootstrap.min.js"></script>
 <script type='text/javascript' src="js/fullscreen.js"></script>
 <script type='text/javascript' src="js/scrollfix.js"></script>
+<script type='text/javascript' src="js/jquery.touchSwipe.min.js"></script>
 <script type='text/javascript' src="js/bootapps.js"></script>
 
 <!-- Below is only for this demo -->
@@ -337,6 +362,104 @@ $('#myalert, #myalert2').on('click', function () {
     ba_alert.notify('Your text goes here <strong>html test</strong>', 'success', 4000);
     // available: success, info, warning, danger
 });
+
+// swipe plugin
+$(function() {			
+	//Enable swiping...
+	$(".carousel-inner").swipe( {
+		//Generic swipe handler for all directions
+		swipeLeft:function(event) {
+			//$(this).text("You swiped " + direction + " " + ++count + " times " );
+			//var hash = window.location.hash.substr(1); // History to do if possible
+
+			//$('#homecarousel').carousel('next');
+			$(this).parent().carousel('next');
+			//alert("You swiped")	
+		},swipeRight:function(event) {
+			//$(this).text("You swiped " + direction + " " + ++count + " times " );
+			//$('#homecarousel').carousel('prev');
+			$(this).parent().carousel('prev');
+			//alert("You swiped")	
+		},
+		//Default is 75px, set to 0 for demo so any distance triggers swipe
+		//threshold:0
+	});
+});
+
+
+//Add new items / content
+
+$('a#search').on('click', function(e) {
+	e.preventDefault();
+	additem('#homecarousel','My new title','I added new content dynamically')
+});
+
+function additem(target, title, content) {
+	
+	var count = $(target+ " > .carousel-inner > .item").length
+	//alert(count);
+	$(target+" .carousel-inner").append('<div class="item" style="background-color: rgb(255, 255, 255);"><div class="ba-container"><div class="panel panel-info ba-full"><div class="panel-heading">'+title+'</div><div class="panel-body">'+content+'</div></div></div></div>');
+	
+	$(target).carousel(count);
+	//$(target).carousel(parseInt(count));
+	
+}
+
+/*Find data-load*/
+$('a[data-load]').on('click', function(e) {
+	e.preventDefault();
+	//alert('data');
+	//var loadPage = $(this).data("load");
+	var $this = $(this);
+	var loadPage = $this.attr('data-load');
+	//var hashPage = $(this).data("load");
+	var targetItem = $this.attr("href");
+	//var hash = href.substr(href.indexOf("#"));
+	//$(this).prop("hash");
+	
+	if(loadPage=="loaded"){
+		//var carCount = $(targetItem).attr('data-count');
+		var carCount = $('[data-targetItem="'+targetItem+'"]').attr('data-count');
+		//alert(carCount);
+		$('#homecarousel').carousel(parseInt(carCount));	
+		
+	}else{				
+		addpage('#homecarousel','My new title','I added new content dynamically',loadPage,targetItem);
+		//$(this).data("load", "loaded" );
+		$(this).attr('data-load', 'loaded');
+		
+		/*if (this.href.indexOf('#') != -1) {
+		history.pushState(null, null, $(this).attr('href'));
+		}	*/
+	}
+
+});
+
+function addpage(target, title, content, loadPage, targetItem) {
+	
+	var titleID = title.replace(/\s/g, "_");
+	var itemID = targetItem.substr(targetItem.indexOf("#"));
+	//var hash = href.substr(href.indexOf("#"));
+	//var hash=targetItem.substring(1);
+	
+	var count = $(target+ " > .carousel-inner > .item").length
+	//alert(count);
+	$(target+" .carousel-inner").append('<div class="item" data-targetItem="'+targetItem+'" data-count="'+count+'" id="'+titleID+'" style="background-color: rgb(255, 255, 255);"></div>');
+	
+	$(target).carousel(count);
+	//$(target).carousel(parseInt(count));
+	
+	//$("#"+titleID).load("ajaxPage.html");
+	//$("#"+titleID).append("<div id='childDiv'>new div to be produced</div>");
+	$("#"+titleID).load(loadPage,function(responseTxt,statusTxt,xhr){
+		//if(statusTxt=="success")
+		//  alert("External content loaded successfully!");
+		if(statusTxt=="error")
+		  alert("Error: "+xhr.status+": "+xhr.statusText);
+	});
+	
+}
+
 </script>
 
    
